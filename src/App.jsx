@@ -21,7 +21,8 @@ export const App = () => {
   return (
     <div className="section">
       <h1 className="title">
-        Selected tab is {tabs.find(tab => tab.id === activeTabId).title}
+        Selected tab is{' '}
+        {tabs.find(tab => tab.id === activeTabId)?.title || tabs[0].title}
         {/*
           I'd like to pass the title here asynchronously when it's
           found in the loop that goes through tabs, e.g. with state, but
